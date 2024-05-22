@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(images/Background-img.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: block;
+  } 
+  
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    
+}
+
+.welcome_btn{
+    margin: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#adminLoginLink {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#adminLoginLink:hover {
+    text-decoration: underline;
+}
+
+#homeLoginLink {
+    display: inline-block;
+    margin-top: 5px;
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+#homeLoginLink:hover {
+    text-decoration: underline;
+}
+
+.container{
+  max-width: 1170px;
+  margin:auto;
+  margin-top: 10%;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+
+/* footer  */
+#wrapper{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  /* background: linear-gradient(315deg, #ffffff, #d7e1ec); */
+  margin-top: 130px;
+}
+.tooltip{
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  background-color: #fff;
+}
+#fb{
+  background-color: #064789;
+}
+#insta{
+  background-color: #e1306c;
+}
+#linked{
+  background-color: #0077b5;
+}
+.wrapper{
+  display: inline-flex;
+}
+.wrapper .icon{
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .icon span{
+  position: relative;
+  height: 60px;
+  width: 60px;
+  display: block;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.wrapper .icon:hover span i{
+  color: #fff;
+}
+.wrapper .icon span i{
+  font-size: 25px;
+  line-height: 60px;
+}
+.wrapper .icon .tooltip{
+  position: absolute;
+  top: 0px;
+  background: fff;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 18pz;
+  border-radius: 25px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .icon:hover .tooltip{
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .icon .tooltip:before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  bottom: -8px;
+  left: 50%;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip
+.wrapper .facebook:hover .tooltip::before{
+  background: #3b5999;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip
+.wrapper .instagram:hover .tooltip::before{
+  background: #e1306c;
+}
+.wrapper .linkedin:hover span,
+.wrapper .linkedin:hover .tooltip
+.wrapper .linkedin:hover .tooltip::before{
+  background: #0077b5;
+}
+.links{
+  color: black;
+}
+.folded-image{
+  width: 700px;
+  aspect-ratio: 1.92;
+  display: flex;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-top: 80px;
+  float: right;
+}
+.span{
+  width: 20%;
+  height: 100%;
+  background-image: url(https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+  margin-bottom: 25px;
+}
+.span:nth-child(1){
+  border-radius: 30px 0 0 30px;
+  background-position: 0% center;
+}
+.span:nth-child(2){
+  background-position: 25% center;
+}
+.span:nth-child(3){
+  background-position: 50% center;
+}
+.span:nth-child(4){
+  background-position: 75% center;
+}
+.span:nth-child(5){
+  border-radius: 0 30px 30px 0;
+  background-position: 100% center;
+}

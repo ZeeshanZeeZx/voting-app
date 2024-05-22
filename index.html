@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Voting</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body class="background">
+        <div class="container">
+            <h1>Student Voting System</h1>
+            
+            <div id="welcomeSection">
+                <h2>Welcome</h2>
+                <button class="welcome_btn" id="registerButton">Register</button>
+                <button class="welcome_btn" id="loginButton">Login to Vote</button>
+            </div>
+            
+            <form id="registrationForm" style="display:none;">
+                <h2>Register</h2>
+                <label for="regName">Name:</label>
+                <input type="text" id="regName" required>
+                <label for="regNumber">Student Number:</label>
+                <input type="text" id="regNumber" required>
+                <button type="submit">Register</button>
+            </form>
+            
+            <form id="loginForm" style="display:none;">
+                <h2>Login</h2>
+                <label for="loginName">Name:</label>
+                <input type="text" id="loginName" required>
+                <label for="loginNumber">Student Number:</label>
+                <input type="text" id="loginNumber" required>
+                <button type="submit">Login</button>
+            </form>
+            
+            <form id="voteForm" style="display:none;">
+                <h2>Vote for Your Favorite Topic</h2>
+                <div id="topics"></div>
+                <button type="submit">Vote</button>
+            </form>
+            
+            <div id="adminLoginSection" style="text-align:center; margin-top:20px;">
+                <a href="#" id="adminLoginLink">Admin Login</a>
+            </div>
+            
+            <form id="adminLoginForm" style="display:none;">
+                <h2>Admin Login</h2>
+                <label for="adminName">Admin Name:</label>
+                <input type="text" id="adminName" required>
+                <label for="adminPassword">Password:</label>
+                <input type="password" id="adminPassword" required>
+                <button type="submit">Login</button>
+            </form>
+            
+            <div id="adminSection" style="display:none;">
+                <h2>Admin Section</h2>
+                <form id="publishTopicForm">
+                    <label for="newTopic">New Topic:</label>
+                    <input type="text" id="newTopic" required>
+                    <button type="submit">Publish Topic</button>
+                </form>
+                <button id="clearTopicsButton">Clear All Topics</button>
+            </div>
+            
+            <div style="text-align:center; margin-top:20px;">
+                <a href="/" id="homeLoginLink">Home</a>
+            </div>
+        </div>
+            <!-- -footer section  -->
+        <footer class="footer">
+            <div id="wrapper">
+                <div class="wrapper">
+                    <div class="icon facebook">
+                        <div class="tooltip" id="fb">Gmail</div>
+                            <span>
+                                <a href="mailto:zeeshanzx26@gmail.com" class="links" target="_blank" previewlistener="true">
+                                    <i class="fa fa-envelope"></i>
+                                </a>    
+                            </span>        
+                        </div>
+                    <div class="icon instagram">
+                        <div class="tooltip" id="insta">Github</div>
+                        <span>
+                            <a href="https://www.instagram.com/alfaizsheikh04?igsh=MXhkeXAza2MzNHY3Zg==" class="links" target="_blank" previewlistener="true">
+                                <i class="fa-github-square" aria-hidden="true"></i>
+                            </a>
+                        </span>
+                    </div>
+                    <div class="icon linkedin">
+                        <div class="tooltip" id="linked">Linkedin</div>
+                        <span>
+                            <a href="https://www.linkedin.com/in/zee-raza/" class="links" target="_blank" previewlistener="true">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </span>    
+                    </div>
+                </div>
+            </div>
+            </footer>
+              
+<script src="script.js"></script>
+</body>
+</html>     
