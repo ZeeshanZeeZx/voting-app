@@ -13,6 +13,12 @@ document.getElementById('loginButton').addEventListener('click', function() {
     document.getElementById('loginForm').style.display = 'block';
 });
 
+document.getElementById('viewResultsButton').addEventListener('click', function() {
+    displayResults();
+    document.getElementById('welcomeSection').style.display = 'none';
+    document.getElementById('resultsSection').style.display = 'block';
+});
+
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const name = document.getElementById('regName').value;
@@ -59,6 +65,10 @@ document.getElementById('voteForm').addEventListener('submit', function(event) {
     students[number].voted = true;
     localStorage.setItem('students', JSON.stringify(students));
 
+    let votes = JSON.parse(localStorage.getItem('votes')) || {};
+    votes[selectedTopic] = (votes[selectedTopic] || 0) + 1;
+    localStorage.setItem('votes', JSON.stringify(votes));
+
     alert(`You voted for: ${selectedTopic}`);
     document.getElementById('voteForm').reset();
     document.getElementById('voteForm').style.display = 'none';
@@ -100,9 +110,17 @@ document.getElementById('publishTopicForm').addEventListener('submit', function(
 document.getElementById('clearTopicsButton').addEventListener('click', function() {
     if (confirm('Are you sure you want to clear all topics?')) {
         localStorage.removeItem('topics');
+        localStorage.removeItem('votes');
         alert('All topics have been cleared!');
         displayTopics();
         resetVotes();
+    }
+});
+
+document.getElementById('publishResultsButton').addEventListener('click', function() {
+    if (confirm('Are you sure you want to publish the results?')) {
+        displayResults();
+        alert('Results have been published!');
     }
 });
 
@@ -122,4 +140,14 @@ function resetVotes() {
         students[number].voted = false;
     }
     localStorage.setItem('students', JSON.stringify(students));
+}
+
+function displayResults() {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '';
+    let votes = JSON.parse(localStorage.getItem('votes')) || {};
+    for (let topic in votes) {
+        const resultHtml = `<p>${topic}: ${votes[topic]} vote(s)</p>`;
+        resultsDiv.innerHTML += resultHtml;
+    }
 }
