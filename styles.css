@@ -6,7 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url(images/Background-img.jpg);
+    background-image: url(images/back-ground-img.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     display: block;
@@ -239,4 +239,14 @@ ul{
 .span:nth-child(5){
   border-radius: 0 30px 30px 0;
   background-position: 100% center;
+}
+
+.footer{
+  color: black;
+  text-align: center;
+  font-size: large;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
